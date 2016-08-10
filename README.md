@@ -95,4 +95,6 @@ compile(name:'weex_sdk-release', ext:'aar')
 ```gradle
 include ":weex_sdk"
 project(":weex_sdk").projectDir = new File("D:\\Temp-Doc\\weex\\weex-repo\\android\\sdk")
+// 采用方式2（即引入sdk目录自己构建的时候）引入WEEX_SDK时需要
+// ../weex-repo/android/sdk 目录为 https://github.com/alibaba/weex/tree/dev/android/sdk 在本地的目录
 ```
