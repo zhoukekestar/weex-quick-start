@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.github.zhoukekestar.weexquickstart"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    // 采用方式1（即自定义aar方式）引入SDK时需要使用
+    repositories {
+        flatDir {
+//            dirs 'libs'
+            dirs project(':app').file('libs')
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+
+    // android
+    compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.android.support:support-annotations:23.1.1'
+
+
+    // 方式1：SDK 自定义arr引入（构建playground的时候会在weex\android\sdk\build\outputs\aar\weex_sdk-release.aar）
+    compile(name:'weex_sdk-release', ext:'aar')
+//    compile(name:'weex_debug-release', ext:'aar')
+//    compile(name:'inspector-release', ext:'aar')
+
+    // 方式2：SDK 目录引入
+//     compile project(':weex_sdk')
+
+    // 方式3：SDK 官方发布引入，官方会发布SDK到jcenter
+//     compile 'com.taobao.android:weex_sdk:0.6.1'
+
+    // alibaba
+    compile 'com.alibaba:fastjson:1.1.46.android'
+    compile 'com.taobao.android:dexposed:0.1.8'
+
+    // facebook
+    compile 'com.facebook.fresco:fresco:0.10.0'
+
+    // squareup
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.squareup.okhttp:okhttp:2.3.0'
+    compile 'com.squareup.okhttp:okhttp-ws:2.3.0'
+    compile 'com.squareup.okio:okio:1.0.1'
+
+    // others
+    compile 'com.jakewharton.scalpel:scalpel:1.1.2'
+    compile 'com.loopj.android:android-async-http:1.4.9@aar'
+}

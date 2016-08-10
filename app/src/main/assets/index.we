@@ -1,0 +1,5 @@
+<template>
+  <div>
+    <text>Hello WEEX.</text>
+  </div>
+</template>
