@@ -1,5 +1,5 @@
 ## Weex-Quick-Start
-该项目为Weex的Quick-Start项目
+该项目为Weex的Quick-Start项目，使用过程中如果有更好的样例或者，能把代码解释得更详细的，更清楚的，欢迎提PR，我会尽量merge的^-^.
 
 ## app/libs，复制libs
 app/libs下有`inspector-[debug/release].aar`,`weex_debug-[debug/release].aar`,`weex_sdk-[debug/release].aar`等6个文件
