@@ -99,6 +99,13 @@ project(":weex_sdk").projectDir = new File("D:\\Temp-Doc\\weex\\weex-repo\\andro
 // ../weex-repo/android/sdk 目录为 https://github.com/alibaba/weex/tree/dev/android/sdk 在本地的目录
 ```
 
+## weex开发
+* weex开发在`weex/src`目录下
+* Linux/Mac用户，需执行`npm install`来安装依赖，之后需要运行`npm run build`
+* windows用户，需执行`npm install`来安装依赖，之后只需双击run.cmd即可
+* 程序会自动检测文件变化并进行实时编译（如果文件添加，需要重新运行）
+* `weex/src`目录下开发的weex代码，将通过构建导出到`app/src/main/assets/weex`
+
 ## Errors
 我刚开始，貌似有个jsframework未初始化的错误
 ```bash
@@ -115,4 +122,4 @@ project(":weex_sdk").projectDir = new File("D:\\Temp-Doc\\weex\\weex-repo\\andro
 Build->Clean Project，然后再次运行，就好了==
 
 ## Pics
-![样例截屏](./assets/demo.png)
+![样例截屏](./weex/demo.png)

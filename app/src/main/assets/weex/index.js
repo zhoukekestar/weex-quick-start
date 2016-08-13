@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports) {
 
-	;__weex_define__("@weex-component/cefc5515a2d3b6299c48ac28c0707cec", [], function(__weex_require__, __weex_exports__, __weex_module__){
+	;__weex_define__("@weex-component/cefc5515a2d3b6299c48ac28c0707cec", [], function(__weex_require__, exports, __weex_module__){
 
 	;__weex_module__.exports.template = __weex_module__.exports.template || {}
 	;Object.assign(__weex_module__.exports.template, {

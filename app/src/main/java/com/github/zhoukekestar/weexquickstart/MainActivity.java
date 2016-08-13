@@ -47,7 +47,7 @@ public class MainActivity extends Activity {
             }
         });
 
-        String template = WXFileUtils.loadFileContent("index.js", this);
+        String template = WXFileUtils.loadFileContent("weex/index.js", this);
         mInstance.render("pagenmae", template, null, null, -1, -1, WXRenderStrategy.APPEND_ASYNC);
     }
 }
