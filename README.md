@@ -91,10 +91,28 @@ compile(name:'weex_sdk-release', ext:'aar')
 ```
 
 ## settings.gradle
-采用方式2（即引入sdk目录自己构建的时候）引入WEEX_SDK时需要，其他方式可注释掉。。。貌似有个jsframework未初始化的错误，然后把他引入就好了，这个情况我不清楚了，第一次出现问题后，就没出现了，所以没有在意
+采用方式2（即引入sdk目录自己构建的时候）引入WEEX_SDK时需要，其他方式可注释掉。。。
 ```gradle
 include ":weex_sdk"
 project(":weex_sdk").projectDir = new File("D:\\Temp-Doc\\weex\\weex-repo\\android\\sdk")
 // 采用方式2（即引入sdk目录自己构建的时候）引入WEEX_SDK时需要
 // ../weex-repo/android/sdk 目录为 https://github.com/alibaba/weex/tree/dev/android/sdk 在本地的目录
 ```
+
+## Errors
+我刚开始，貌似有个jsframework未初始化的错误
+```bash
+08-13 10:13:49.187 5490-5508/com.github.zhoukekestar.weexquickstart E/weex: [WXBridgeManager] invokeCreateInstance: framework.js uninitialized. // 这边有个错误
+08-13 10:13:49.187 5490-5508/com.github.zhoukekestar.weexquickstart D/weex: WXDebugTool not found!
+08-13 10:13:49.187 5490-5508/com.github.zhoukekestar.weexquickstart D/weex: WXDebugTool not found!
+08-13 10:13:49.187 5490-5508/com.github.zhoukekestar.weexquickstart D/weex: framework from assets
+08-13 10:13:49.207 5490-5508/com.github.zhoukekestar.weexquickstart D/weex: WXDebugTool not found!
+08-13 10:13:49.217 5490-5508/com.github.zhoukekestar.weexquickstart D/weex: WXDebugTool not found!
+08-13 10:13:49.317 5490-5490/com.github.zhoukekestar.weexquickstart D/OpenGLRenderer: Enabling debug mode 0
+08-13 10:13:49.347 5490-5490/com.github.zhoukekestar.weexquickstart E/weex: error:createInstance fail! // 错误，然后，无法正常显示
+```
+解决方案：
+Build->Clean Project，然后再次运行，就好了==
+
+## Pics
+![样例截屏](./assets/demo.png)
