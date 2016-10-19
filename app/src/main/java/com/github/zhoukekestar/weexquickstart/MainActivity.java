@@ -33,24 +33,27 @@ public class MainActivity extends Activity implements IWXRenderListener  {
 
     @Override
     public void onViewCreated(WXSDKInstance wxsdkInstance, View view) {
-        Log.v(TAG, "view Created");
+        Log.v(TAG, "onViewCreated");
         setContentView(view);
+        Toast.makeText(MainActivity.this, "onViewCreated", Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void onRenderSuccess(WXSDKInstance instance, int width, int height) {
         Log.v(TAG, "onRenderSuccess");
+        Toast.makeText(MainActivity.this, "onRenderSuccess", Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void onRefreshSuccess(WXSDKInstance wxsdkInstance, int i, int i1) {
         Log.v(TAG, "onRefreshSuccess");
+        Toast.makeText(MainActivity.this, "onRefreshSuccess", Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void onException(WXSDKInstance instance, String errCode, String msg) {
 
         Log.v(TAG, "onException errCode:" + errCode + " msg:" + msg);
-        Toast.makeText(MainActivity.this, "ERROR  errCode:" + errCode + " msg:" + msg, Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, "ERROR  errCode:" + errCode + " msg:" + msg, Toast.LENGTH_LONG).show();
     }
 }
