@@ -1,6 +1,15 @@
 ## Weex-Quick-Start
 该项目为Weex的Quick-Start项目，使用过程中如果有更好的样例或者，能把代码解释得更详细的，更清楚的，欢迎提PR，我会尽量merge的^-^.
 
+## 20161019更新笔记
+* 由于小米note3是64的机器，导致出现`java.lang.UnsatisfiedLinkError: dlopen failed: "/data/data/com.github.zhoukekestar.weexquickstart/files/libweexcorebk1.so" is 32-bit instead of 64-bit`错误，纠结了好几天。。。换成32位的机器就行了
+* `launchInspector HackAssertionException com.taobao.weex.utils.WXHack$HackDeclaration$HackAssertionException: java.lang.ClassNotFoundException: com.taobao.weex.devtools.debug.DebugServerProxy` 该错误不影响页面的基础显示
+* `[WXBridgeManager] invokeCallJSBatch: framework.js uninitialized.`该错误不影响页面基础展示
+* gradle构建的maven镜像使用了阿里云的maven镜像库进行了加速：`maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }`（国外的实在太慢了）
+* 推荐使用方式3引入SDK，如: `compile 'com.taobao.android:weex_sdk:0.8.0.1`，该方式最为简单
+* 该QuickStart项目将以最小可运行、最基础样例代码为目的
+
+
 ## app/libs，复制libs
 app/libs下有`inspector-[debug/release].aar`,`weex_debug-[debug/release].aar`,`weex_sdk-[debug/release].aar`等6个文件
 
