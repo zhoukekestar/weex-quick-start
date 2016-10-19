@@ -17,16 +17,14 @@
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
-
     <application
         android:name=".MainApplication"
-        tools:overrideLibrary="com.taobao.android.dexposed"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-
+        android:theme="@style/AppTheme"
+        tools:overrideLibrary="com.taobao.android.dexposed">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

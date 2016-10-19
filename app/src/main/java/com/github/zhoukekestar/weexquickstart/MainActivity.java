@@ -2,52 +2,55 @@ package com.github.zhoukekestar.weexquickstart;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.taobao.weex.IWXRenderListener;
 import com.taobao.weex.WXSDKInstance;
 import com.taobao.weex.common.WXRenderStrategy;
 import com.taobao.weex.utils.WXFileUtils;
-import com.taobao.weex.utils.WXLogUtils;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements IWXRenderListener  {
 
-    private ViewGroup mViewGroup;
+    private static final String TAG = "MainActivity";
+    private static WXSDKInstance mInstance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        WXSDKInstance mInstance = new WXSDKInstance(this);
+        mInstance = new WXSDKInstance(this);
+        mInstance.registerRenderListener(this);
 
-        mViewGroup = (ViewGroup) findViewById(R.id.main_container);
+        // WeexSDK 0.5.1
+//        mInstance.render("WeexQuickStart", WXFileUtils.loadFileContent("weex/index.js", this), null, null, -1, -1, WXRenderStrategy.APPEND_ASYNC);
 
-        mInstance.registerRenderListener(new IWXRenderListener() {
-            @Override
-            public void onViewCreated(WXSDKInstance instance, View view) {
-                mViewGroup.addView(view);
-            }
+        // WeexSDK 0.8.0.1
+        mInstance.render("WeexQuickStart", WXFileUtils.loadAsset("weex/index.js", this), null, null, -1, -1, WXRenderStrategy.APPEND_ASYNC);
+    }
 
-            @Override
-            public void onRenderSuccess(WXSDKInstance instance, int width, int height) {
-                WXLogUtils.v("Render Success");
-            }
+    @Override
+    public void onViewCreated(WXSDKInstance wxsdkInstance, View view) {
+        Log.v(TAG, "view Created");
+        setContentView(view);
+    }
 
-            @Override
-            public void onRefreshSuccess(WXSDKInstance instance, int width, int height) {
-                WXLogUtils.v("Refresh Success");
-            }
+    @Override
+    public void onRenderSuccess(WXSDKInstance instance, int width, int height) {
+        Log.v(TAG, "onRenderSuccess");
+    }
 
-            @Override
-            public void onException(WXSDKInstance instance, String errCode, String msg) {
-                WXLogUtils.e("error:" + msg);
-            }
-        });
+    @Override
+    public void onRefreshSuccess(WXSDKInstance wxsdkInstance, int i, int i1) {
+        Log.v(TAG, "onRefreshSuccess");
+    }
 
-        String template = WXFileUtils.loadFileContent("weex/index.js", this);
-        mInstance.render("pagenmae", template, null, null, -1, -1, WXRenderStrategy.APPEND_ASYNC);
+    @Override
+    public void onException(WXSDKInstance instance, String errCode, String msg) {
+
+        Log.v(TAG, "onException errCode:" + errCode + " msg:" + msg);
+        Toast.makeText(MainActivity.this, "ERROR  errCode:" + errCode + " msg:" + msg, Toast.LENGTH_SHORT).show();
     }
 }

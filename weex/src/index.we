@@ -1,5 +1,19 @@
 <template>
   <div>
-    <text>Hello WEEX.</text>
+    <text onclick="{{toast}}">Hello WEEX.</text>
   </div>
 </template>
+
+<script>
+  var modal = require('@weex-module/modal');
+  module.exports = {
+    methods: {
+      toast: function() {
+        modal.toast({
+          'message': 'Hello Weex',
+          'duration': 1
+        });
+      }
+    }
+  }
+</script>
