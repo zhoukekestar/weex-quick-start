@@ -8,7 +8,7 @@
 * gradle构建的maven镜像使用了阿里云的maven镜像库进行了加速：`maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }`（国外的实在太慢了）
 * 推荐使用方式3引入SDK，如: `compile 'com.taobao.android:weex_sdk:0.8.0.1`，该方式最为简单
 * 该QuickStart项目将以最小可运行、最基础样例代码为目的
-* 为了节约你的测试成本，你先可以安装[该项目生成的apk](https://zhoukekestar.github.io/weex-quick-start/app-debug.apk)，能成功运行说明代码在你手机上没问题，下载代码愉快地开始使用weex吧，不能的话，估计。。。还得继续踩坑
+* 为了节约你的测试成本，你先可以安装[该项目生成的apk](https://github.com/zhoukekestar/weex-quick-start/releases/download/0.8.0.1/app-debug.apk)，能成功运行说明代码在你手机上没问题，下载代码愉快地开始使用weex吧，不能的话，估计。。。还得继续踩坑
 
 
 ## app/libs，复制libs
