@@ -1,6 +1,10 @@
 ## Weex-Quick-Start
 该项目为Weex的Quick-Start项目，使用过程中如果有更好的样例或者，能把代码解释得更详细的，更清楚的，欢迎提PR，我会尽量merge的^-^.
 
+## 20161021更新笔记
+* 终于修复了64位机器的问题，是由于[引入一个facebook的包](https://github.com/zhoukekestar/weex-quick-start/issues/1)引起的，也是郁闷。。。
+ 
+
 ## 20161019更新笔记
 * 由于小米note3是64的机器，导致出现`java.lang.UnsatisfiedLinkError: dlopen failed: "/data/data/com.github.zhoukekestar.weexquickstart/files/libweexcorebk1.so" is 32-bit instead of 64-bit`错误，纠结了好几天。。。换成32位的机器就行了
 * `launchInspector HackAssertionException com.taobao.weex.utils.WXHack$HackDeclaration$HackAssertionException: java.lang.ClassNotFoundException: com.taobao.weex.devtools.debug.DebugServerProxy` 该错误不影响页面的基础显示
