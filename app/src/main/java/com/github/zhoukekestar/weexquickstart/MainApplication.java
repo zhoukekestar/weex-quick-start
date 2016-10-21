@@ -2,10 +2,8 @@ package com.github.zhoukekestar.weexquickstart;
 
 import android.app.Application;
 
-import com.facebook.drawee.backends.pipeline.Fresco;
 import com.taobao.weex.InitConfig;
 import com.taobao.weex.WXSDKEngine;
-import com.taobao.weex.common.WXException;
 
 /**
  * Created by Administrator on 8/10/2016.
