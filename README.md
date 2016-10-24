@@ -3,7 +3,7 @@
 
 ## 20161021更新笔记
 * 终于修复了64位机器的问题，是由于[引入一个facebook的包](https://github.com/zhoukekestar/weex-quick-start/issues/1)引起的，也是郁闷。。。
- 
+* 你可以进入[下载页](https://github.com/zhoukekestar/weex-quick-start/releases)下载[最新的apk](https://github.com/zhoukekestar/weex-quick-start/releases/download/1.0.1/WeexQuickStart.apk)在自己的手机上试试
 
 ## 20161019更新笔记
 * 由于小米note3是64的机器，导致出现`java.lang.UnsatisfiedLinkError: dlopen failed: "/data/data/com.github.zhoukekestar.weexquickstart/files/libweexcorebk1.so" is 32-bit instead of 64-bit`错误，纠结了好几天。。。换成32位的机器就行了
