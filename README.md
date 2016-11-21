@@ -5,7 +5,7 @@
 * IDE: Android Studio 2.2.1
 * System: Windows 10, 64 bit.
 * Gradle: 2.14.1
-* [命令日志详情](https://github.com/zhoukekestar/weex-quick-start/blob/master/README.md)
+* [命令日志详情](https://github.com/zhoukekestar/weex-quick-start/blob/master/cmds.md)
 ```bash
 git clone https://github.com/zhoukekestar/weex-quick-start
 cd weex-quick-start
