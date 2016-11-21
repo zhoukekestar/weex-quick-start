@@ -1,5 +1,19 @@
 ## Weex-Quick-Start
-该项目为Weex的Quick-Start项目，使用过程中如果有更好的样例或者，能把代码解释得更详细的，更清楚的，欢迎提PR，我会尽量merge的^-^.
+该项目为Weex的Quick-Start项目，使用过程中如果有更好的样例或者，能把代码解释得更详细的，更清楚的，欢迎提PR，我会尽量merge的^-^. 请先进入[下载页](https://github.com/zhoukekestar/weex-quick-start/releases)下载[最新的apk](https://github.com/zhoukekestar/weex-quick-start/releases/download/1.0.1/WeexQuickStart.apk)在自己的手机上试试，不行的话，手机兼容可能有点问题，可以的话，就可以大胆尝试了。
+
+## 环境说明
+* IDE: Android Studio 2.2.1
+* System: Windows 10, 64 bit.
+* Gradle: 2.14.1
+* [命令日志详情](https://github.com/zhoukekestar/weex-quick-start/blob/master/README.md)
+```bash
+git clone https://github.com/zhoukekestar/weex-quick-start
+cd weex-quick-start
+gradle build  
+// 因为我没有配置gradle命令的路径，所以，实际命令是 "C:\Program Files\Android\Android Studio\gradle\gradle-2.14.1\bin\gradle" build
+// 生成的apk在app\build\outputs\apk目录下
+// 你也可以直接使用android studio打开该文件夹进行编译
+```
 
 ## 20161021更新笔记
 * 终于修复了64位机器的问题，是由于[引入一个facebook的包](https://github.com/zhoukekestar/weex-quick-start/issues/1)引起的，也是郁闷。。。
