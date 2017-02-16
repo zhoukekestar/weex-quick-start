@@ -21,9 +21,8 @@ gradle build
 * `serve` 开启服务器，（需安装`serve`命令：`npm install serve -g`)
 * 打开游览器，并访问`http://localhost:3000/public/`
 
-## 屏幕截屏
+## 屏幕截屏 & 点击跳转后的截屏
 ![view-1](./weex/view-1.png)
-## 点击跳转后台的截屏
 ![view-2](./weex/view-2.png)
 
 
