@@ -21,10 +21,10 @@ gradle build
 * `serve` 开启服务器，（需安装`serve`命令：`npm install serve -g`)
 * 打开游览器，并访问`http://localhost:3000/public/`
 
-## 屏幕截屏 & 点击跳转后的截屏
-![view-1](./weex/view-1.png)
-![view-2](./weex/view-2.png)
-
+## 屏幕截屏
+| 首页 | 点击跳转后 |
+| --- | --- |
+| ![view-1](./weex/view-1.png) | ![view-2](./weex/view-2.png) |
 
 ## 20161021更新笔记
 * 终于修复了64位机器的问题，是由于[引入一个facebook的包](https://github.com/zhoukekestar/weex-quick-start/issues/1)引起的，也是郁闷。。。
