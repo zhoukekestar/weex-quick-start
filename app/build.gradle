@@ -49,7 +49,7 @@ dependencies {
 
     // 方式3：SDK 官方发布引入，官方会发布SDK到jcenter
 //    compile 'com.taobao.android:weex_sdk:0.5.1@aar'
-    compile 'com.taobao.android:weex_sdk:0.8.0.1'
+    compile 'com.taobao.android:weex_sdk:0.9.5'
 
 
     compile 'com.alibaba:fastjson:1.1.46.android'

@@ -44,7 +44,31 @@
 /* 0 */
 /***/ function(module, exports) {
 
-	;__weex_define__("@weex-component/cefc5515a2d3b6299c48ac28c0707cec", [], function(__weex_require__, exports, __weex_module__){
+	;__weex_define__("@weex-component/068c1ab8c0ae58a88b729733426de575", [], function(__weex_require__, exports, __weex_module__){
+
+	;
+	  const modal = __weex_require__('@weex-module/modal');
+	  const navigator = __weex_require__('@weex-module/navigator');
+
+	  __weex_module__.exports = {
+	    methods: {
+	      toast() {
+	        modal.toast({
+	          'message': 'Hello Weex',
+	          'duration': 1
+	        });
+	      },
+	      oninput() {},
+	      onclick() {
+	        const path = this.$el('input').attr.value;
+	        
+	        navigator.push({
+	          url: path,
+	          animation: 'true',
+	        }, () => {});
+	      }
+	    }
+	  }
 
 	;__weex_module__.exports.template = __weex_module__.exports.template || {}
 	;Object.assign(__weex_module__.exports.template, {
@@ -52,14 +76,83 @@
 	  "children": [
 	    {
 	      "type": "text",
+	      "classList": [
+	        "title"
+	      ],
+	      "events": {
+	        "click": "toast"
+	      },
 	      "attr": {
 	        "value": "Hello WEEX."
 	      }
+	    },
+	    {
+	      "type": "div",
+	      "classList": [
+	        "input-container"
+	      ],
+	      "children": [
+	        {
+	          "type": "input",
+	          "id": "input",
+	          "classList": [
+	            "input"
+	          ],
+	          "events": {
+	            "input": "oninput"
+	          }
+	        },
+	        {
+	          "type": "text",
+	          "classList": [
+	            "button"
+	          ],
+	          "events": {
+	            "click": "onclick"
+	          },
+	          "attr": {
+	            "value": "跳转页面"
+	          }
+	        }
+	      ]
 	    }
 	  ]
 	})
+	;__weex_module__.exports.style = __weex_module__.exports.style || {}
+	;Object.assign(__weex_module__.exports.style, {
+	  "title": {
+	    "marginTop": 40,
+	    "textAlign": "center",
+	    "fontSize": 28
+	  },
+	  "input-container": {
+	    "marginTop": 80,
+	    "justifyContent": "center",
+	    "alignItems": "center"
+	  },
+	  "input": {
+	    "width": 700,
+	    "borderWidth": 1,
+	    "borderColor": "#cccccc",
+	    "fontSize": 28,
+	    "paddingTop": 10,
+	    "paddingRight": 10,
+	    "paddingBottom": 10,
+	    "paddingLeft": 10
+	  },
+	  "button": {
+	    "marginTop": 40,
+	    "backgroundColor": "#27cafb",
+	    "borderRadius": 4,
+	    "paddingTop": 10,
+	    "paddingRight": 10,
+	    "paddingBottom": 10,
+	    "paddingLeft": 10,
+	    "color": "#ffffff"
+	  }
 	})
-	;__weex_bootstrap__("@weex-component/cefc5515a2d3b6299c48ac28c0707cec", {
+	})
+	;__weex_bootstrap__("@weex-component/068c1ab8c0ae58a88b729733426de575", {
 	  "transformerVersion": "0.3.1"
 	},undefined)
 

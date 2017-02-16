@@ -1,19 +1,67 @@
 <template>
   <div>
-    <text onclick="{{toast}}">Hello WEEX.</text>
+    <text class='title' onclick="{{toast}}">Hello WEEX.</text>
+    <div class="input-container">
+      <input id='input' class='input' oninput="oninput" />
+      <text class='button' onclick='onclick'>跳转页面</text>
+    </div>
   </div>
 </template>
 
 <script>
-  var modal = require('@weex-module/modal');
+  const modal = require('@weex-module/modal');
+  const navigator = require('@weex-module/navigator');
+
   module.exports = {
     methods: {
-      toast: function() {
+      toast() {
         modal.toast({
           'message': 'Hello Weex',
           'duration': 1
         });
+      },
+      oninput() {},
+      onclick() {
+        const path = this.$el('input').attr.value;
+        
+        navigator.push({
+          url: path,
+          animation: 'true',
+        }, () => {});
       }
     }
   }
 </script>
+
+<style>
+  .title {
+    margin-top: 40;
+    text-align: center;
+    font-size: 28;
+  }
+  .input-container {
+    margin-top: 80;
+    justify-content: center;
+    align-items: center;
+  }
+  .input {
+    width: 700;
+    border-width: 1;
+    border-color: #ccc;
+    font-size: 28;
+    padding-top: 10;
+    padding-right: 10;
+    padding-bottom: 10;
+    padding-left: 10;
+  }
+  .button {
+    margin-top: 40;
+    background-color: #27cafb;
+    border-radius: 4;
+    padding-top: 10;
+    padding-right: 10;
+    padding-bottom: 10;
+    padding-left: 10;
+    color: #fff;
+  }
+</style>

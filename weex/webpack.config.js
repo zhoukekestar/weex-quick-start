@@ -11,9 +11,14 @@ function walk(dir) {
       var fullpath = path.join(directory, file);
       var stat = fs.statSync(fullpath);
       var extname = path.extname(fullpath);
+
       if (stat.isFile() && extname === '.we') {
         var name = path.join('../app/src/main/assets/weex', dir, path.basename(file, extname));
+        var name2 = path.join('./dist', dir, path.basename(file, extname));
+
         entry[name] = fullpath + '?entry=true';
+        entry[name2] = fullpath + '?entry=true';
+        
       } else if (stat.isDirectory() && file !== 'build' && file !== 'include') {
         var subdir = path.join(dir, file);
         walk(subdir);
