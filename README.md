@@ -21,6 +21,12 @@ gradle build
 * `serve` 开启服务器，（需安装`serve`命令：`npm install serve -g`)
 * 打开游览器，并访问`http://localhost:3000/public/`
 
+## 屏幕截屏
+![view-1](./weex/view-1.png)
+## 点击跳转后台的截屏
+![view-1](./weex/view-1.png)
+
+
 ## 20161021更新笔记
 * 终于修复了64位机器的问题，是由于[引入一个facebook的包](https://github.com/zhoukekestar/weex-quick-start/issues/1)引起的，也是郁闷。。。
 * 你可以进入[下载页](https://github.com/zhoukekestar/weex-quick-start/releases)下载[最新的apk](https://github.com/zhoukekestar/weex-quick-start/releases/download/1.0.1/WeexQuickStart.apk)在自己的手机上试试
@@ -154,6 +160,3 @@ project(":weex_sdk").projectDir = new File("D:\\Temp-Doc\\weex\\weex-repo\\andro
 ```
 解决方案：
 Build->Clean Project，然后再次运行，就好了==
-
-## Pics
-![样例截屏](./weex/demo.png)
