@@ -24,7 +24,7 @@ gradle build
 ## 屏幕截屏
 ![view-1](./weex/view-1.png)
 ## 点击跳转后台的截屏
-![view-1](./weex/view-1.png)
+![view-2](./weex/view-2.png)
 
 
 ## 20161021更新笔记
