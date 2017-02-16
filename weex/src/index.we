@@ -2,7 +2,7 @@
   <div>
     <text class='title' onclick="{{toast}}">Hello WEEX.</text>
     <div class="input-container">
-      <input id='input' class='input' oninput="oninput" />
+      <input id='input' class='input' oninput="oninput" value='https://weex-project.io/js/examples/list.weex.js' />
       <text class='button' onclick='onclick'>跳转页面</text>
     </div>
   </div>
@@ -23,7 +23,7 @@
       oninput() {},
       onclick() {
         const path = this.$el('input').attr.value;
-        
+
         navigator.push({
           url: path,
           animation: 'true',
