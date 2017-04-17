@@ -24,11 +24,6 @@ public class MainActivity extends Activity implements IWXRenderListener  {
         mInstance = new WXSDKInstance(this);
         mInstance.registerRenderListener(this);
 
-        // WeexSDK 0.5.1
-//        mInstance.render("WeexQuickStart", WXFileUtils.loadFileContent("weex/index.js", this), null, null, -1, -1, WXRenderStrategy.APPEND_ASYNC);
-
-        // WeexSDK 0.8.0.1
-//        mInstance.render("WeexQuickStart", WXFileUtils.loadAsset("weex/index.js", this), null, null, -1, -1, WXRenderStrategy.APPEND_ASYNC);
         mInstance.render(WXFileUtils.loadAsset("weex/index.js", this));
     }
 
