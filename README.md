@@ -1,5 +1,5 @@
 ## Weex-Quick-Start
-[![GitHub stars](https://img.shields.io/github/stars/badges/shields.svg?style=social&label=Star)](https://github.com/zhoukekestar/weex-quick-start)
+[![GitHub stars](https://img.shields.io/github/stars/zhoukekestar/weex-quick-start.svg?style=flat&label=Star)](https://github.com/zhoukekestar/weex-quick-start)
 
 该项目为Weex的Quick-Start项目，使用过程中如果有更好的样例或者，能把代码解释得更详细的，更清楚的，欢迎提PR，我会尽量merge的^-^. 请先进入[下载页](https://github.com/zhoukekestar/weex-quick-start/releases)下载最新的apk在自己的手机上试试，不行的话，手机兼容可能有点问题，可以的话，就可以大胆尝试了。
 
