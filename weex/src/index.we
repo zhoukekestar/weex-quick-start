@@ -24,6 +24,11 @@
       onclick() {
         const path = this.$el('input').attr.value;
 
+        if (!/^https?:\/\/.+/.test(path)) {
+          modal.toast({ 'message': 'Invalid URL', 'duration': 1 });
+          return;
+        }
+
         navigator.push({
           url: path,
           animation: 'true',
